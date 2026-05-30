@@ -10,7 +10,7 @@ rating: 4.2
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://shopee.co.id/search?keyword=hp+android+3+juta"
+cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
 product:
   name: "HP Android Rp 3 Jutaan 2026"
   brand: "Multi-brand"

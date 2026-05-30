@@ -10,7 +10,7 @@ rating: 4.2
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://shopee.co.id/search?keyword=iphone+second+ibox"
+cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
 product:
   name: "iPhone Second Worth Buy 2026"
   brand: "Multi-brand"

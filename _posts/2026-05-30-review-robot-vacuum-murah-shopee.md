@@ -10,7 +10,7 @@ rating: 4.0
 verdict: "Worth dengan catatan"
 review_count: 4
 cta_top: true
-cta_url: "https://shopee.co.id/search?keyword=robot+vacuum+cleaner"
+cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
 product:
   name: "Robot Vacuum Budget Roundup"
   brand: "Multi-brand"

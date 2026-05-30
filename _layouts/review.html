@@ -21,7 +21,7 @@ layout: default
   {% if page.cta_top %}
   <div class="cta-box">
     <p><strong>Cek harga & stok terbaru di Shopee:</strong></p>
-    <a class="btn-shopee" href="{{ page.cta_url }}" rel="nofollow sponsored" target="_blank">🛒 Lihat di Shopee</a>
+    <a class="btn-shopee" href="{{ page.cta_url | default: site.shopee_affiliate_url }}" rel="nofollow sponsored" target="_blank">🛒 Lihat di Shopee</a>
     <small>*Link affiliate. Klik = bantu support situs ini, gratis buat Anda.</small>
   </div>
   {% endif %}
@@ -42,10 +42,10 @@ layout: default
   </section>
   {% endif %}
 
-  {% if page.cta_url %}
+  {% if page.cta_url or site.shopee_affiliate_url %}
   <div class="cta-box cta-bottom">
     <p><strong>Tertarik {{ page.product.name | default: 'produk ini' }}?</strong></p>
-    <a class="btn-shopee" href="{{ page.cta_url }}" rel="nofollow sponsored" target="_blank">🛒 Beli di Shopee</a>
+    <a class="btn-shopee" href="{{ page.cta_url | default: site.shopee_affiliate_url }}" rel="nofollow sponsored" target="_blank">🛒 Beli di Shopee</a>
   </div>
   {% endif %}
 

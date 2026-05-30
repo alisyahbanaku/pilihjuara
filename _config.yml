@@ -10,10 +10,14 @@ author:
   twitter: iqbullish
 
 # Affiliate ID Shopee — REPLACE INI dengan ID lo dari affiliate.shopee.co.id
-shopee_affiliate_id: "REPLACE_ME"
+shopee_affiliate_id: "an_11349780963"
+shopee_affiliate_url: "https://s.shopee.co.id/6L1g6oSRfh"
+shopee_campaign: "id_oyDGPYxXKD"
 
 # Default Shopee deeplink format
-# https://shp.ee/xxx?af_id={affiliate_id} or s.shopee.co.id/{slug}?af_id=
+# Universal short link: https://s.shopee.co.id/6L1g6oSRfh
+# To override per-product: generate from affiliate.shopee.co.id → "Convert Link"
+# and set cta_url in post front-matter
 
 theme: jekyll-theme-cayman
 
