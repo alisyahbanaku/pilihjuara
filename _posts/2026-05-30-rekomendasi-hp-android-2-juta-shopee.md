@@ -10,7 +10,7 @@ rating: 4.4
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
+cta_url: "https://s.shopee.co.id/3g0uwvsbOF"
 product:
   name: "HP Android Rp 2 Jutaan Roundup 2026"
   brand: "Multi-brand"

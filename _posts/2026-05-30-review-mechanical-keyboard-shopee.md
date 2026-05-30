@@ -10,7 +10,7 @@ rating: 4.3
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
+cta_url: "https://s.shopee.co.id/3qKL9Ery3G"
 product:
   name: "Mechanical Keyboard Budget Roundup"
   brand: "Multi-brand"

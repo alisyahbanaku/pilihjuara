@@ -10,7 +10,7 @@ rating: 4.2
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
+cta_url: "https://s.shopee.co.id/2qRnxOvm56"
 product:
   name: "Earbuds TWS Budget Roundup"
   brand: "Multi-brand"

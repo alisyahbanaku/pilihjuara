@@ -10,7 +10,7 @@ rating: 4.8
 verdict: "Wajib tahu"
 review_count: 1
 cta_top: false
-cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
+cta_url: "https://s.shopee.co.id/3LO4YJts49"
 faq:
   - q: "Berapa banyak voucher yang bisa di-stack di 1 transaksi Shopee?"
     a: "Maksimum 1 voucher platform + 1 voucher toko + voucher pengiriman + Shopee Coins. Total 3-4 layer diskon. Sistem auto-pilih kombinasi yang paling besar diskonnya."

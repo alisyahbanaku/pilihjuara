@@ -10,7 +10,7 @@ rating: 4.1
 verdict: "Worth checkout"
 review_count: 5
 cta_top: true
-cta_url: "https://s.shopee.co.id/6L1g6oSRfh"
+cta_url: "https://s.shopee.co.id/3g0uwvsbOF"
 product:
   name: "Smartwatch Budget Roundup"
   brand: "Multi-brand"
