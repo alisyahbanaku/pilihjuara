@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{% if page.layout == 'review' %}article{% else %}website{% endif %}">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ site.twitter.username }}">
+
+{% seo title=false %}
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}">
+
+{% if page.product %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.product.name | escape }}",
+  "image": "{{ page.product.image | absolute_url }}",
+  "description": "{{ page.description | escape }}",
+  "brand": { "@type": "Brand", "name": "{{ page.product.brand | default: 'Generic' | escape }}" },
+  {% if page.product.price %}"offers": {
+    "@type": "Offer",
+    "url": "{{ page.url | absolute_url }}",
+    "priceCurrency": "IDR",
+    "price": "{{ page.product.price }}",
+    "availability": "https://schema.org/InStock"
+  },{% endif %}
+  "review": {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "{{ page.rating | default: 4.0 }}", "bestRating": 5 },
+    "author": { "@type": "Person", "name": "PilihJuara" },
+    "reviewBody": "{{ page.description | escape }}"
+  },
+  {% if page.rating %}"aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.rating }}",
+    "reviewCount": "{{ page.review_count | default: 1 }}"
+  }{% endif %}
+}
+</script>
+{% endif %}
+
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.q | escape }}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{ item.a | escape }}" }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}"><strong>PilihJuara</strong></a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}">Beranda</a>
+      <a href="{{ '/review/' | relative_url }}">Review</a>
+      <a href="{{ '/rekomendasi/' | relative_url }}">Rekomendasi</a>
+      <a href="{{ '/promo/' | relative_url }}">Promo</a>
+      <a href="{{ '/tentang/' | relative_url }}">Tentang</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>PilihJuara</strong> — Review & rekomendasi produk Shopee Indonesia.</p>
+    <p class="affiliate-disclosure">
+      <strong>Disclosure afiliasi:</strong> Beberapa link di situs ini adalah affiliate Shopee.
+      Kami bisa dapat komisi tanpa biaya tambahan dari sisi Anda. Review tetap independen dan jujur.
+      <a href="{{ '/disclosure/' | relative_url }}">Selengkapnya</a>.
+    </p>
+    <p>© {{ 'now' | date: '%Y' }} PilihJuara. Dibuat di Yogyakarta. <a href="https://iqbullish.xyz">iqbullish.xyz</a></p>
+  </div>
+</footer>
+</body>
+</html>

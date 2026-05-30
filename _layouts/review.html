@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<article class="review">
+  <header class="review-header">
+    <p class="breadcrumb">
+      <a href="{{ '/' | relative_url }}">Beranda</a> ›
+      {% if page.categories %}{% for cat in page.categories %}<a href="{{ '/' | append: cat | relative_url }}/">{{ cat | capitalize }}</a> ›{% endfor %}{% endif %}
+      <span>{{ page.title }}</span>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    {% if page.rating %}
+    <div class="rating-badge">
+      <strong>{{ page.rating }}/5</strong>
+      <span>{{ page.verdict | default: 'Worth checkout' }}</span>
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.cta_top %}
+  <div class="cta-box">
+    <p><strong>Cek harga & stok terbaru di Shopee:</strong></p>
+    <a class="btn-shopee" href="{{ page.cta_url }}" rel="nofollow sponsored" target="_blank">🛒 Lihat di Shopee</a>
+    <small>*Link affiliate. Klik = bantu support situs ini, gratis buat Anda.</small>
+  </div>
+  {% endif %}
+
+  <div class="review-body">
+    {{ content }}
+  </div>
+
+  {% if page.faq %}
+  <section class="faq">
+    <h2>Pertanyaan yang Sering Ditanyakan</h2>
+    {% for item in page.faq %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if page.cta_url %}
+  <div class="cta-box cta-bottom">
+    <p><strong>Tertarik {{ page.product.name | default: 'produk ini' }}?</strong></p>
+    <a class="btn-shopee" href="{{ page.cta_url }}" rel="nofollow sponsored" target="_blank">🛒 Beli di Shopee</a>
+  </div>
+  {% endif %}
+
+  <footer class="review-footer">
+    <p>Review dipublikasi: {{ page.date | date: "%-d %B %Y" }}.
+    {% if page.updated %}Diperbarui: {{ page.updated | date: "%-d %B %Y" }}.{% endif %}</p>
+    <p>Punya pertanyaan? <a href="https://t.me/iqbullish">DM Telegram @iqbullish</a> atau <a href="mailto:contact@iqbullish.xyz">email</a>.</p>
+  </footer>
+</article>

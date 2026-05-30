@@ -1,0 +1,55 @@
+title: PilihJuara — Review & Rekomendasi Produk Shopee Indonesia
+description: Review jujur, perbandingan, dan rekomendasi produk terbaik di Shopee Indonesia. Gadget, elektronik, smart home, dan lifestyle — riset dulu sebelum checkout.
+url: "https://alisyahbanaku.github.io"
+baseurl: "/pilihjuara"
+lang: id-ID
+
+author:
+  name: PilihJuara
+  email: contact@iqbullish.xyz
+  twitter: iqbullish
+
+# Affiliate ID Shopee — REPLACE INI dengan ID lo dari affiliate.shopee.co.id
+shopee_affiliate_id: "REPLACE_ME"
+
+# Default Shopee deeplink format
+# https://shp.ee/xxx?af_id={affiliate_id} or s.shopee.co.id/{slug}?af_id=
+
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: review
+
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# SEO
+twitter:
+  username: iqbullish
+  card: summary_large_image
+
+social:
+  name: PilihJuara
+  links:
+    - https://iqbullish.xyz
+    - https://t.me/iqbullish
+    - https://x.com/iqbullish
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
